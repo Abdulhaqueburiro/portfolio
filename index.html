@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Abdulhaque Buriro | AI Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Poppins,sans-serif;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:#080513;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+
+height:700px;
+
+background:#6d28ff;
+
+filter:blur(220px);
+
+opacity:.18;
+
+top:-250px;
+
+right:-250px;
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:500px;
+
+height:500px;
+
+background:#00ff55;
+
+filter:blur(180px);
+
+opacity:.12;
+
+left:-180px;
+
+bottom:-180px;
+
+z-index:-2;
+
+}
+
+/* Navbar */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:22px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(8,5,19,.82);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#fff;
+
+}
+
+.logo span{
+
+color:#00ff55;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:40px;
+
+list-style:none;
+
+}
+
+nav ul a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:17px;
+
+transition:.35s;
+
+}
+
+nav ul a:hover{
+
+color:#00ff55;
+
+}
+
+.btn{
+
+background:#00ff55;
+
+padding:14px 30px;
+
+border-radius:50px;
+
+color:black;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 0 35px #00ff55;
+
+}
+
+/* Hero */
+
+.hero{
+
+min-height:100vh;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+padding:120px 8%;
+
+gap:60px;
+
+}
+
+.hero h3{
+
+color:#00ff55;
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.hero h1{
+
+font-size:78px;
+
+line-height:1.05;
+
+margin-bottom:20px;
+
+font-weight:800;
+
+}
+
+.hero h1 span{
+
+color:#00ff55;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+color:#bdbdbd;
+
+line-height:1.9;
+
+margin-bottom:40px;
+
+max-width:650px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.btn2{
+
+padding:14px 30px;
+
+border:2px solid #00ff55;
+
+border-radius:50px;
+
+color:#00ff55;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+.btn2:hover{
+
+background:#00ff55;
+
+color:black;
+
+}
+
+/* Right */
+
+.image{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+.circle{
+
+width:470px;
+
+height:470px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#00ff55,#5d2eff);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 0 80px rgba(0,255,85,.45);
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+.circle img{
+
+width:430px;
+
+height:430px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:8px solid #080513;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0px);}
+
+50%{transform:translateY(-18px);}
+
+100%{transform:translateY(0px);}
+
+}
+
+.card{
+
+position:absolute;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+padding:18px 24px;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+box-shadow:0 0 25px rgba(0,0,0,.4);
+
+}
+
+.card i{
+
+font-size:28px;
+
+color:#00ff55;
+
+}
+
+.card1{
+
+top:40px;
+
+left:-20px;
+
+}
+
+.card2{
+
+bottom:30px;
+
+right:-20px;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+.circle{
+
+width:320px;
+
+height:320px;
+
+}
+
+.circle img{
+
+width:290px;
+
+height:290px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+Abdul<span>.</span>
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Skills</a></li>
+
+<li><a href="#">Projects</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+<a href="#" class="btn">Hire Me</a>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h3>Hello, I'm</h3>
+
+<h1>Abdulhaque <span>Buriro</span></h1>
+
+<p>
+
+AI & Machine Learning Enthusiast building intelligent solutions with Python,
+Machine Learning and Automation.
+
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn">View Projects</a>
+
+<a href="#" class="btn2">Download CV</a>
+
+</div>
+
+</div>
+
+<div class="image">
+
+<div class="circle">
+
+<img src="https://i.imgur.com/Hp9h7M6.png">
+
+</div>
+
+<div class="card card1">
+
+<i class="fa-solid fa-brain"></i>
+
+<div>
+
+<h4>Machine Learning</h4>
+
+<p>AI Projects</p>
+
+</div>
+
+</div>
+
+<div class="card card2">
+
+<i class="fa-solid fa-code"></i>
+
+<div>
+
+<h4>Python Developer</h4>
+
+<p>Automation</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
