@@ -1849,7 +1849,52 @@ font-size:32px;
 
 }
 
+/* Contact Form */
 
+.contact-form{
+    max-width:600px;
+    margin:40px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px 18px;
+    background:#1b2338;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+    font-family:inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#00e676;
+    box-shadow:0 0 10px rgba(0,230,118,.25);
+}
+
+.contact-form textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+.contact-form .btn{
+    width:220px;
+    margin:auto;
+    cursor:pointer;
+    border:none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#bfbfbf;
+}
 
 </style>
 
@@ -2704,20 +2749,33 @@ I'm always interested in Machine Learning, AI, Data Science, and Web Development
 Feel free to contact me for collaboration, freelance work, internships, or full-time roles.
 </p>
 
-<a href="mailto:your@email.com" class="btn">
-<i class="fa-solid fa-envelope"></i>
-Email Me
-</a>
+<form action="https://formsubmit.co/abhaqueburiro90@gmail.com" method="POST" class="contact-form">
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://abdulhaqueburiro.github.io/portfolio/">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+    <button type="submit" class="btn">
+        <i class="fa-solid fa-paper-plane"></i>
+        Send Message
+    </button>
+
+</form>
 
 <br><br>
 
 <div class="contact-links">
 
-<a href="https://github.com/yourusername" target="_blank">
+<a href="https://github.com/Abdulhaqueburiro" target="_blank">
 <i class="fab fa-github"></i>
 </a>
 
-<a href="https://linkedin.com/in/yourusername" target="_blank">
+<a href="linkedin.com/in/abdul-haque-253529307" target="_blank">
 <i class="fab fa-linkedin-in"></i>
 </a>
 
@@ -2725,11 +2783,11 @@ Email Me
 <i class="fab fa-x-twitter"></i>
 </a>
 
-<a href="mailto:your@email.com">
+<a href="mailto:abhaqueburiro90@gmail.com">
 <i class="fa-solid fa-envelope"></i>
 </a>
 
-<a href="https://wa.me/923001234567" target="_blank">
+<a href="03203067539" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
 
